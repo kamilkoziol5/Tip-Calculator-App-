@@ -29,7 +29,7 @@
 					<input id="bill-input" type="number" placeholder="0" />
 				</div>
 				<span>Select Tip %</span>
-				<div class="select-tip-wrapper" 5>
+				<div class="select-tip-wrapper">
 					<button class="btn-tip" data-percent="5">5%</button>
 					<button class="btn-tip" data-percent="10">10%</button>
 					<button class="btn-tip" data-percent="15">15%</button>
@@ -37,7 +37,10 @@
 					<button class="btn-tip" data-percent="50">50%</button>
 					<input type="number" class="btn-custom" placeholder="Custom" />
 				</div>
-				<span>Number of People</span>
+				<div class="number-people-title">
+					<span>Number of People</span>
+					<span class="alert-message">Can't be zero!</span>
+				</div>
 				<div class="number-people-wrapper">
 					<span class="icon"><img src="images/icon-person.svg" alt="" /></span
 					><input id="person-input" type="number" placeholder="-" />

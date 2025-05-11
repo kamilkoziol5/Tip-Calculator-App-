@@ -5,6 +5,9 @@ const personInput = document.querySelector('#person-input');
 const btnReset = document.querySelector('.reset-btn');
 const tipPerPersonDiv = document.querySelector('.amount-person');
 const totalAmountPerPersonDiv = document.querySelector('.total-amount-person');
+const inputBillWrapper = document.querySelector('.input-bill-wrapper');
+const alertMessage = document.querySelector('.alert-message');
+const peopleInput = document.querySelector('.number-people-wrapper');
 
 btnTips.forEach(btn => {
 	btn.addEventListener('click', () => {
@@ -29,6 +32,7 @@ btnCustom.addEventListener('input', () => {
 function calculateTip() {
 	const bill = parseFloat(billInput.value);
 	const people = parseFloat(personInput.value);
+
 	let tipPercent = '';
 
 	const activePercentBtn = document.querySelector('.btn-tip.active');
@@ -37,6 +41,20 @@ function calculateTip() {
 		tipPercent = parseFloat(activePercentBtn.dataset.percent);
 	} else if (btnCustom.value) {
 		tipPercent = parseFloat(btnCustom.value);
+	}
+
+	if (people <= 0 || isNaN(people)) {
+		alertMessage.style.opacity = '1';
+		peopleInput.classList.add('active-border');
+	} else {
+		alertMessage.style.opacity = '0';
+		peopleInput.classList.remove('active-border');
+	}
+
+	if (bill > 0) {
+		inputBillWrapper.classList.add('active');
+	} else {
+		inputBillWrapper.classList.remove('active');
 	}
 
 	if (!bill || !people || !tipPercent) {
@@ -60,4 +78,7 @@ btnReset.addEventListener('click', () => {
 	totalAmountPerPersonDiv.textContent = '$0.00';
 	btnCustom.value = '';
 	btnTips.forEach(btn => btn.classList.remove('active'));
+	inputBillWrapper.classList.remove('active');
+	peopleInput.classList.remove('active-border');
+	alertMessage.style.opacity = '0';
 });

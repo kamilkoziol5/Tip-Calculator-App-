@@ -55,6 +55,9 @@ body {
 			align-items: center;
 			justify-content: space-between;
 			margin: 0.7rem 0;
+			padding: 5px 15px;
+			border: 2px solid transparent;
+			transition: 200ms ease;
 
 			input {
 				width: 100%;
@@ -69,6 +72,14 @@ body {
 					color: $grey-400;
 					font-weight: 700;
 				}
+			}
+
+			&:hover {
+				border: 2px solid $green-400;
+			}
+
+			&.active {
+				border: 2px solid $green-400;
 			}
 		}
 
@@ -122,11 +133,25 @@ body {
 			}
 		}
 
+		.number-people-title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 2.5rem;
+		}
+		.alert-message {
+			color: rgb(255, 76, 53);
+			transition: 200ms ease;
+			opacity: 0;
+		}
+
 		.number-people-wrapper {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 			margin: 0.7rem 0;
+			padding: 5px 15px;
+			transition: 200ms ease;
 
 			input {
 				width: 100%;
@@ -141,6 +166,10 @@ body {
 					color: $grey-400;
 					font-weight: 700;
 				}
+			}
+
+			&.active-border {
+				border: 2px solid red;
 			}
 		}
 	}
