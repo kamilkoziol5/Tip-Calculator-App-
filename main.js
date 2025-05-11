@@ -21,6 +21,11 @@ btnTips.forEach(btn => {
 	});
 });
 
+btnCustom.addEventListener('input', () => {
+	btnTips.forEach(btn => btn.classList.remove('active'));
+	calculateTip();
+});
+
 function calculateTip() {
 	const bill = parseFloat(billInput.value);
 	const people = parseFloat(personInput.value);
