@@ -168,8 +168,11 @@ body {
 				}
 			}
 
-			&.active-border {
+			&.alert-border {
 				border: 2px solid red;
+			}
+			&.active-border {
+				border: 2px solid $green-400;
 			}
 		}
 	}

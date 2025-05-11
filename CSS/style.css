@@ -151,8 +151,11 @@ body .logo {
   color: hsl(184, 14%, 56%);
   font-weight: 700;
 }
-.container .left-bills-side .number-people-wrapper.active-border {
+.container .left-bills-side .number-people-wrapper.alert-border {
   border: 2px solid red;
+}
+.container .left-bills-side .number-people-wrapper.active-border {
+  border: 2px solid hsl(172, 67%, 45%);
 }
 .container .right-bills-side {
   min-width: 400px;

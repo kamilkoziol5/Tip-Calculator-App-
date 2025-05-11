@@ -45,10 +45,12 @@ function calculateTip() {
 
 	if (people <= 0 || isNaN(people)) {
 		alertMessage.style.opacity = '1';
-		peopleInput.classList.add('active-border');
+		peopleInput.classList.remove('active-border');
+		peopleInput.classList.add('alert-border');
 	} else {
 		alertMessage.style.opacity = '0';
-		peopleInput.classList.remove('active-border');
+		peopleInput.classList.remove('alert-border');
+		peopleInput.classList.add('active-border');
 	}
 
 	if (bill > 0) {
@@ -79,6 +81,6 @@ btnReset.addEventListener('click', () => {
 	btnCustom.value = '';
 	btnTips.forEach(btn => btn.classList.remove('active'));
 	inputBillWrapper.classList.remove('active');
-	peopleInput.classList.remove('active-border');
+	peopleInput.classList.remove('alert-border');
 	alertMessage.style.opacity = '0';
 });
