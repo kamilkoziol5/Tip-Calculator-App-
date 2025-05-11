@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="CSS/style.css" />
+
+		<title>Frontend Mentor | Tip calculator app</title>
+	</head>
+	<body>
+		<img class="logo" src="images/logo.svg" alt="" />
+
+		<div class="container">
+			<div class="left-bills-side">
+				<span>Bill</span>
+				<div class="input-bill-wrapper">
+					<span class="icon"><img src="images/icon-dollar.svg" alt="" /></span>
+					<input id="bill-input" type="number" placeholder="0" />
+				</div>
+				<span>Select Tip %</span>
+				<div class="select-tip-wrapper" 5>
+					<button class="btn-tip" data-percent="5">5%</button>
+					<button class="btn-tip" data-percent="10">10%</button>
+					<button class="btn-tip" data-percent="15">15%</button>
+					<button class="btn-tip" data-percent="25">25%</button>
+					<button class="btn-tip" data-percent="50">50%</button>
+					<input type="number" class="btn-custom" placeholder="Custom" />
+				</div>
+				<span>Number of People</span>
+				<div class="number-people-wrapper">
+					<span class="icon"><img src="images/icon-person.svg" alt="" /></span
+					><input id="person-input" type="number" placeholder="-" />
+				</div>
+			</div>
+
+			<div class="right-bills-side">
+				<div class="tip-amount">
+					<div class="tip-amount-column-text">
+						<span> Tip Amount</span>
+						<span class="person"> / person</span>
+					</div>
+					<div class="bills-score-message amount-person">$0.00</div>
+				</div>
+				<div class="total-amount">
+					<div class="total-amount-column-text">
+						<span> Total</span>
+						<span class="person"> / person</span>
+					</div>
+					<div class="bills-score-message total-amount-person">$0.00</div>
+				</div>
+				<button class="reset-btn">RESET</button>
+			</div>
+		</div>
+
+		<script src="main.js"></script>
+	</body>
+</html>
